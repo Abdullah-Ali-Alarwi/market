@@ -1,0 +1,26 @@
+.Roud-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+.box img {
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+}
+h5 {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 75px;
+    height: 75px;
+  }
+}

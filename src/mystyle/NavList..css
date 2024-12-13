@@ -1,0 +1,87 @@
+ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
+  text-align: center;
+  justify-content: space-around;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* إخفاء شريط التمرير */
+}
+
+.scrollable {
+  display: flex;
+  gap: 10px;
+  width: 300%; /* عرض المحتوى أوسع من الحاوية */
+  scroll-behavior: smooth; /* تنقل سلس */
+}
+li {
+  margin: 0;
+  padding: 5px;
+  display: inline-block;
+  font-size: 13px;
+}
+li:hover {
+  background-color: #e2dede;
+}
+
+/* نننننننننننننننن */
+.Navlist {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.scrollable {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.scroll-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 5px;
+  height: 5px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-btn.left {
+  margin-right: 10px;
+}
+
+.scroll-btn.right {
+  margin-left: 10px;
+}

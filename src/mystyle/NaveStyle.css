@@ -1,0 +1,127 @@
+body {
+  direction: rtl;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(46, 45, 45);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+h1 {
+  color: rgb(38, 36, 36);
+  font-weight: bold;
+}
+nav img {
+  width: 22px;
+}
+.logDiv {
+  margin-right: 20px;
+  color: yellow;
+}
+.logDiv h1 {
+  margin-right: 20px;
+  color: rgba(255, 255, 0, 0.567);
+}
+
+.SearchNav {
+  background-color: rgb(255, 253, 249);
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5px; */
+  border: 2px solid rgb(108, 106, 106);
+}
+.SearchNav input {
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-right: 10px;
+}
+.SearchNav .logoSearch {
+  border-right: 2px solid rgb(169, 163, 163);
+  height: 110%;
+  padding: 5px;
+  cursor: pointer;
+}
+.iconsNav {
+  width: 15%;
+  display: flex;
+}
+.iconsNav h1 {
+  text-transform: capitalize;
+}
+.iconsNav img {
+  margin-left: 15px;
+}
+
+.glbal-icon {
+  margin-right: 30px;
+}
+.heartIcon,
+.Cart-icon {
+  position: relative;
+}
+.heartIcon span,
+.Cart-icon span {
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+  background-color: red;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 12px;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*  phone media  */
+/* إعدادات لتصغير العناصر على الهاتف */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .SearchNav {
+    width: 90%;
+    margin: 5px;
+  }
+  .iconsNav {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconsNav img {
+    margin: 20px;
+  }
+
+  .heartIcon span,
+  .Cart-icon span {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transform: translateY(-120%);
+  }
+  .logDiv {
+    margin-top: 20px;
+  }
+}

@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import { TheThem } from './Context/ThemedComponent';
+import Nav from './Component/Nav';
+import NavList from './Component/NavList';
+import RouldImageList from './Component/RouldImageList';
+import Cart from './Component/Cart';
+import Footer from './Component/Footer';
 
-function App() {
+export default function App() {
+  const contextThem = useContext(TheThem);
+  console.log(contextThem);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${contextThem.them}`}>
+      <div>
+        <Nav />
+        <NavList />
+        <div className="Container">
+          <RouldImageList />
+          <Cart />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
