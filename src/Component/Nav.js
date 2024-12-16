@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { TheThem } from '../Context/ThemedComponent';
+import { Link } from 'react-router-dom';
+import { ContextApi } from '../Context/ThemedComponent';
 // eslint-disable-next-line no-unused-vars
 import NavStyle from '../mystyle/NaveStyle.css';
 import Searchicon from '../SVG icons/magnifying-glass-solid.svg';
@@ -12,14 +13,13 @@ import moon from '../SVG icons/moon-solid.svg';
 import sun from '../SVG icons/sun-solid.svg';
 
 function Nav() {
-  const contextThem = useContext(TheThem);
+  const { them, toggole } = useContext(ContextApi);
+  const { basket } = useContext(ContextApi); // الوصول إلى منتجات من السياق
   return (
     <div>
-      <nav className={contextThem.them}>
+      <nav className={them}>
         <div className="logDiv">
-          <h1
-            style={{ color: contextThem.them === 'light' ? 'black' : 'white' }}
-          >
+          <h1 style={{ color: them === 'light' ? 'black' : 'white' }}>
             ShowBadak
           </h1>
         </div>
@@ -36,19 +36,20 @@ function Nav() {
             <span>10</span>
             <img src={heart} alt="Cart icon" />
           </div>
-          <div className="Cart-icon">
-            <span>30</span>
-            <img src={cart} alt="Cart icon" />
-          </div>
+
+          <Link to={`./basket`}>
+            {' '}
+            <div className="Cart-icon">
+              <span>{basket.length}</span>
+              <img src={cart} alt="Cart icon" />
+            </div>
+          </Link>
+
           <img src={headPhone} alt="Cart icon" />
           <div className="glbal-icon">
             <img src={glbal} alt="User icon" />
 
-            <img
-              src={contextThem.them === 'dark' ? moon : sun}
-              alt=""
-              onClick={contextThem.toggole}
-            />
+            <img src={them === 'dark' ? moon : sun} alt="" onClick={toggole} />
           </div>
         </div>
       </nav>

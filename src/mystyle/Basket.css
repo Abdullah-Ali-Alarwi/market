@@ -1,0 +1,11 @@
+.Basket {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.Basket button {
+  background-color: red;
+}

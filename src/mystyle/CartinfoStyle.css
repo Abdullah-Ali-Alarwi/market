@@ -1,0 +1,18 @@
+.CartInfor {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.detale {
+  margin: 30px;
+}
+.dark {
+  color: rgb(184, 28, 28);
+  background-color: #0a0808c8;
+}
+
+.light {
+  color: #120c0c99;
+  background-color: white;
+}

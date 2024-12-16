@@ -5,6 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ThemedComponent from './Context/ThemedComponent';
+import CartInof from '../src/CartInof';
+import Cart from './Component/Cart';
+import Basket from './Component/Basket';
+
+import RouldImageList from './Component/RouldImageList';
 
 const Router = createBrowserRouter([
   {
@@ -14,6 +19,26 @@ const Router = createBrowserRouter([
         <App />
       </ThemedComponent>
     ),
+    errorElement: <div>خطا في الصفحة </div>,
+    children: [
+      {
+        path: '/',
+        element: (
+          <ThemedComponent>
+            <RouldImageList />
+            <Cart />
+          </ThemedComponent>
+        ),
+      },
+      {
+        path: '/:id',
+        element: <CartInof />,
+      },
+      {
+        path: '/basket',
+        element: <Basket />,
+      },
+    ],
   },
 ]);
 

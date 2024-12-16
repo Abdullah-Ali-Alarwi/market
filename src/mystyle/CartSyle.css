@@ -46,3 +46,28 @@
     text-align: center;
   }
 }
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.dark {
+  color: white;
+  background-color: #0a0808c8;
+}
+
+.light {
+  color: #120c0c99;
+  background-color: white;
+}
+
+.confirmation {
+  position: relative;
+  color: green;
+  font-size: 50px;
+  background-color: white;
+  padding: 10px;
+  top: 50%;
+}

@@ -1,25 +1,23 @@
 import React, { useContext } from 'react';
-import { TheThem } from './Context/ThemedComponent';
+import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
+import { ContextApi } from './Context/ThemedComponent';
 import Nav from './Component/Nav';
 import NavList from './Component/NavList';
-import RouldImageList from './Component/RouldImageList';
-import Cart from './Component/Cart';
 import Footer from './Component/Footer';
 
 export default function App() {
-  const contextThem = useContext(TheThem);
-  console.log(contextThem);
+  const Data = useContext(ContextApi); // استخدام السياق
+  const { them } = useContext(ContextApi);
+  console.log(Data); // عرض بيانات السياق
   return (
-    <div className={`${contextThem.them}`}>
-      <div>
-        <Nav />
-        <NavList />
-        <div className="Container">
-          <RouldImageList />
-          <Cart />
-        </div>
-        <Footer />
-      </div>
+    <div className={them}>
+      <Nav />
+      <NavList />
+
+      <Outlet />
+      <Footer />
     </div>
   );
 }

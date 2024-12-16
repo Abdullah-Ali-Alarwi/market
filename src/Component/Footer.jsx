@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { TheThem } from '../Context/ThemedComponent';
+import { ContextApi } from '../Context/ThemedComponent';
 import footersyle from '../mystyle/footerSyle.css';
 import Search from '../SVG icons/magnifying-glass-solid.svg';
 import tweeter from '../SVG icons/twitter-brands-solid.svg';
 import facebook from '../SVG icons/facebook-brands-solid.svg';
 import instgram from '../SVG icons/instagram-brands-solid.svg';
 function Footer() {
-  const contextThem = useContext(TheThem);
+  const Data = useContext(ContextApi);
   return (
-    <div className={`containerFooter ${contextThem.them}`}>
+    <div className={`containerFooter ${Data.them}`}>
       <div className={`footer`}>
         <div className="left">
           <div className="col">
